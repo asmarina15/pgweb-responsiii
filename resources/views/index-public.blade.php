@@ -63,7 +63,45 @@
     // Set basemap default
     baseMaps["World Imagery with Labels"].addTo(map);
 
-    // Data GeoJSON batas administrasi Boyolali (ganti dengan data GeoJSON yang sebenarnya)
+    /* Load GeoJSON */
+    fetch('storage/geojson/boyolali_kec.geojson')
+        .then(response => response.json())
+        .then(data => {
+            L.geoJSON(data, {
+                style: function (feature) {
+                    return {
+                        opacity: 1,
+                        color: "black",
+                        weight: 0.5,
+                        fillOpacity: 0.7,
+                        fillColor: "#FF5733", // Warna yang dipilih (misalnya, oranye)
+                    };
+                },
+                onEachFeature: function (feature, layer) {
+                    var content = "Kecamatan: " + feature.properties.WADMKC;
+                    layer.on({
+                        click: function (e) {
+                            // Fungsi ketika objek diklik
+                            layer.bindPopup(content).openPopup();
+                        },
+                        mouseover: function (e) {
+                            // Tidak ada perubahan warna saat mouse over
+                            layer.bindPopup("Kecamatan " + feature.properties.WADMKC, {
+                                sticky: false
+                            }).openPopup();
+                        },
+                        mouseout: function (e) {
+                            // Fungsi ketika mouse keluar dari objek
+                            layer.resetStyle(e.target); // Mengembalikan gaya garis ke gaya awal
+                            map.closePopup(); // Menutup popup
+                        },
+                    });
+                }
+            }).addTo(map);
+        })
+        .catch(error => {
+            console.error('Error loading the GeoJSON file:', error);
+        });
 
 
     /* GeoJSON Point ke Peta*/
@@ -87,52 +125,6 @@
     $.getJSON("{{ route('api.points') }}", function (data) {
         point.addData(data);
         map.addLayer(point);
-    });
-
-    /* GeoJSON Polyline ke Peta*/
-    var polyline = L.geoJson(null, {
-        onEachFeature: function (feature, layer) {
-            var popupContent = "Nama: " + feature.properties.name + "<br>" +
-                "Deskripsi: " + feature.properties.description + "<br>" +
-                "Foto: <img src='{{ asset('storage/images') }}/" + feature.properties.image + "' class='img-thumbnail' alt=''>" +
-                "<br>";
-
-            layer.on({
-                click: function (e) {
-                    polyline.bindPopup(popupContent);
-                },
-                mouseover: function (e) {
-                    polyline.bindTooltip(feature.properties.name);
-                },
-            });
-        },
-    });
-    $.getJSON("{{ route('api.polylines') }}", function (data) {
-        polyline.addData(data);
-        map.addLayer(polyline);
-    });
-
-    /* GeoJSON polygon ke Peta*/
-    var polygon = L.geoJson(null, {
-        onEachFeature: function (feature, layer) {
-            var popupContent = "Nama: " + feature.properties.name + "<br>" +
-                "Deskripsi: " + feature.properties.description + "<br>" +
-                "Foto: <img src='{{ asset('storage/images') }}/" + feature.properties.image + "' class='img-thumbnail' alt=''>" +
-                "<br>";
-
-            layer.on({
-                click: function (e) {
-                    polygon.bindPopup(popupContent);
-                },
-                mouseover: function (e) {
-                    polygon.bindTooltip(feature.properties.name);
-                },
-            });
-        },
-    });
-    $.getJSON("{{ route('api.polygons') }}", function (data) {
-        polygon.addData(data);
-        map.addLayer(polygon);
     });
 
 </script>

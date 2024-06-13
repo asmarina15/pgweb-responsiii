@@ -7,60 +7,34 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Ragam Pasar & Kuliner Boyolali
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Ragam Pasar dan Kuliner Boyolali adalah sebuah situs *webGIS* yang memberikan informasi lengkap mengenai berbagai pasar tradisional dan pilihan kuliner khas di Boyolali, Jawa Tengah. Situs ini menyajikan informasi tentang tempat-tempat kuliner terbaik, menu spesial, dan pengalaman unik yang bisa ditemukan di setiap pasar. Situs ini memiliki tujuan untuk mempromosikan kekayaan budaya dan cita rasa lokal, Ragam Pasar dan Kuliner Boyolali menjadi panduan penting bagi wisatawan dan pecinta kuliner yang ingin mengeksplorasi pesona di Boyolali.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+*WebGIS* Ragam Pasar dan Kuliner Boyolali disusun dengan menerapkan beberapa komponen penting antara lain:
+a. Menggunakan *platform Laravel* untuk penyusunan *webGIS* yang diintegrasikan dengan *GeoServer* untuk menampilkan data batas administrasi Kecamatan Boyolali dalam format *GeoJSON*.  *Laravel* merupakan *framework* PHP yang menjadi dasar aplikasi, menawarkan *routing, kontroler*, dan fitur lain untuk mengelola permintaan HTTP dan logika bisnis.
+B. *WebGIS* ini disusun dengan bahasa pemrograman HTML, CSS, dan *JavaScript*.
+c. Menggunakan *BootStrap* untuk mengatur tampilan *web* menjadi lebih menarik.
+d. Menggunakan *database* seperti *MySQL/PostgreSQL* untuk menyimpan data titik persebaran pasar yang memuat nama lokasi, titik geometri, gambar, tanggal dibuat, dan foto lokasi.
+e. Menggunakan API *Google Maps* untuk pencarian lokasi pada tampilan peta.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Sumber data:
+a. *Google Maps* untuk persebaran titik pasar di Boyolali
+b. Data *Shapefile* Batas Administrasi Kecamatan Boyolali
+c. *Website*:
+    - Soto Seger Mbok Giyem (https://kumparan.com/harley-b-sastha/soto-seger-mbok-giyem-kuliner-legendaris-boyolali-yang-segernya-bikin-nagih-1uF0yCPrmr4)
+    - Tahu Susu (https://inibaru.id/kulinary/tahu-susu-olahan-unik-dari-susu-khas-boyolali)
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Tangkapan Layar Komponen Penting
+a. Tampilan Awal
+    ![alt text](image.png)
+b. *Dashbord*
+    ![alt text](image-1.png)
+c. *Map*
+    ![alt text](image-2.png)
+    - *Edit Point & Update Point*
+        ![alt text](image-3.png)
+d. *Table-point*
+    ![alt text](image-4.png)
+e. *About*
+    ![alt text](image-5.png)
