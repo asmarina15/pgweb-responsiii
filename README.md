@@ -13,8 +13,8 @@ Sumber data:
 1. *Google Maps* untuk persebaran titik pasar di Boyolali
 2. Data *Shapefile* Batas Administrasi Kecamatan Boyolali
 3. *Website*:
-a.  Soto Seger Mbok Giyem (https://kumparan.com/harley-b-sastha/soto-seger-mbok-giyem-kuliner-legendaris-boyolali-yang-segernya-bikin-nagih-1uF0yCPrmr4)
-b. Tahu Susu (https://inibaru.id/kulinary/tahu-susu-olahan-unik-dari-susu-khas-boyolali)
+- Soto Seger Mbok Giyem (https://kumparan.com/harley-b-sastha/soto-seger-mbok-giyem-kuliner-legendaris-boyolali-yang-segernya-bikin-nagih-1uF0yCPrmr4)
+- Tahu Susu (https://inibaru.id/kulinary/tahu-susu-olahan-unik-dari-susu-khas-boyolali)
 
 Tangkapan Layar Komponen Penting
 
