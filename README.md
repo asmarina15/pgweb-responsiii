@@ -19,11 +19,11 @@ Sumber data:
 Tangkapan Layar Komponen Penting
 
 1. Tampilan Awal
-    ![alt text](image.png)
+    ![alt text](image-7.png)
 2. *Dashbord*
     ![alt text](image-1.png)
 3. *Map*
-    ![alt text](image-2.png)
+    ![alt text](image-6.png)
     - *Edit Point & Update Point*
         ![alt text](image-3.png)
 4. *Table-point*

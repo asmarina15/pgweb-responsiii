@@ -9,7 +9,7 @@ class MapController extends Controller
     public function index()
     {
         $data = [ //$ penulisan variabel pada PHP
-            "title" => "Petaku, Petamu, Peta Kita Semua",
+            "title" => "RAGAM PASAR & KULINER BOYOLALI",
         ];
 
         //check if user is logged in
